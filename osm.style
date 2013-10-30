@@ -178,6 +178,11 @@ node,way    odbl                    text    delete
 node,way    odbl:note               text    delete
 node,way    SK53_bulk:load          text    delete
 
+# mtb tags
+node,way    mtb:scale               text    linear
+node,way    class:bicycle:mtb       text    linear
+node,way    mtb:name                text    linear
+
 # Lots of import tags
 # TIGER (US)
 node,way    tiger:*                 text    delete
