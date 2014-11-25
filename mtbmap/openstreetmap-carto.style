@@ -155,6 +155,11 @@ way         abandoned:landuse       text    phstore
 way         abandoned:power         text    phstore
 way         area:highway            text    phstore
 
+# mtb tags
+node,way    mtb:scale               text    linear
+node,way    class:bicycle:mtb       text    linear
+node,way    mtb:name                text    linear
+
 # Deleted tags
 # These are tags that are generally regarded as useless for most rendering.
 # Most of them are from imports or intended as internal information for mappers
