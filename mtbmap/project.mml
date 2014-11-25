@@ -1,4 +1,4 @@
-¨{
+{
   "bounds": [
     2.5488,
     57.1601,
@@ -34,7 +34,7 @@
     "admin.mss",
     "addressing.mss",
     "mtb.mss"
-  ],
+   ],
   "Layer": [
     {
       "name": "world",
