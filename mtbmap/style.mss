@@ -16,4 +16,4 @@ Map {
                 "Droid Sans Fallback Regular", "Unifont Medium", "unifont Medium";
 
 @water-color: #b5d0d0;
-@land-color: #f2efe9;
+@land-color: #cfe4c5;
