@@ -34,7 +34,7 @@
     "admin.mss",
     "addressing.mss",
     "mtb.mss"
-   ],
+  ],
   "Layer": [
     {
       "name": "world",
@@ -1794,6 +1794,30 @@
       ],
       "id": "amenity-low-priority-poly",
       "advanced": {}
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -20.917199794994907,
+        53.43510936880286,
+        37.99999999870287,
+        84.69463099698999
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT\n    *\n  FROM\n    (SELECT\n        way, prio,\n        ('highway_' || (CASE WHEN substr(highway, length(highway)-3, 4) = 'link' THEN substr(highway, 0, length(highway)-4) ELSE highway END)) AS feature,\n        horse, foot, bicycle, tracktype, \"mtb:scale\" as mtb_scale, \"class:bicycle:mtb\" as class_bicycle_mtb, \"mtb:name\" AS mtb_name,\n        CASE WHEN access IN ('destination') THEN 'destination'::text WHEN access IN ('no', 'private') THEN 'no'::text ELSE NULL END AS access, construction,\n        CASE WHEN oneway IN ('yes', '-1') THEN oneway ELSE NULL END AS oneway,\n        CASE WHEN substr(highway, length(highway)-3, 4) = 'link' THEN 'yes' ELSE 'no' END AS link\n      FROM planet_osm_line\n        JOIN (VALUES\n          ('highway_track',110),\n          ('highway_path',100),\n          ('highway_bridleway',100),\n          ('highway_cycleway',100),\n          ('highway_construction',10)\n        ) AS ordertable (feature, prio)\n          ON ('highway_' || planet_osm_line.highway) = ordertable.feature\n    ) AS features\n        \n  ORDER BY prio) as mtb",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-2328492.03,7063890.45,4230140.65,19593253.9",
+        "dbname": "gis"
+      },
+      "id": "mtb",
+      "class": "mtb",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "mtb"
     }
   ],
   "scale": 1,
