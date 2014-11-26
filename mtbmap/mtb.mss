@@ -33,5 +33,17 @@
        line-color: #ff0000;
   	}
   }
+
+  [zoom >= 15] {
+   [mtb_scale = '0'], 
+   [mtb_scale = '1'],
+   [mtb_scale = '2'], 
+   [mtb_scale = '3'], 
+   [mtb_scale = '4'], 
+   [mtb_scale = '5'], 
+   [mtb_scale = '6'] {
+    line-width: 5.0;
+   }
+  } 
 }      
 
