@@ -45,6 +45,7 @@
   [waterway = 'riverbank']::waterway {
     [zoom >= 6] {
       polygon-fill: @water-color;
+      line-color: #aaa;
       [way_pixels >= 4] {
         polygon-gamma: 0.75;
       }

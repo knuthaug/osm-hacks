@@ -4,6 +4,7 @@
 for low, middle and high zoom levels.
 For each zoomlevel, all borders come from a single attachment, to handle
 overlapping borders correctly.  */
+@nature_reserve: #cc3333;
 
 #admin-low-zoom[zoom < 11],
 #admin-mid-zoom[zoom >= 11][zoom < 13],
@@ -128,14 +129,16 @@ overlapping borders correctly.  */
   [zoom >= 7] {
     ::fill [zoom < 13] {
       opacity: 0.05;
-      polygon-fill: green;
+      polygon-fill: @nature_reserve;
     }
     ::line {
       opacity: 0.15;
-      line-color: green;
+      line-color: darken(@nature_reserve, 50%);
       line-width: 1.5;
       line-dasharray: 4,2;
       [zoom >= 10] {
+        line-color: darken(@nature_reserve, 50%);
+        polygon-fill: @nature_reserve;
         line-width: 3;
         line-dasharray: 6,2;
         line-join: bevel;

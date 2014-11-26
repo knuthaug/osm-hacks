@@ -1,10 +1,10 @@
 // --- Parks, woods, other green things ---
 
-@forest: #a0cf85;
+@forest: #cfe4c5;
 @grass: #cfeca8; // also meadow, common, garden, village_green, conservation
 @golf_course: #b5e3b5;
 @park: #cdf7c9; // also recreation_ground
-@wood: #aed1a0;
+@wood: #cfe4c5;
 @vineyard: #b3e2a8;
 @grassland: #c6e4b4;
 
@@ -60,6 +60,7 @@
 @military: #f55;
 @zoo: #a4f3a1;
 @beach: #fff1ba;
+@nature_reserve: #cc3333;
 
 #landcover {
  [feature = 'leisure_swimming_pool'][zoom >= 14] {
@@ -69,7 +70,7 @@
     [way_pixels >= 4]  { polygon-gamma: 0.75; }
     [way_pixels >= 64] { polygon-gamma: 0.3;  }
   }
-
+  
   [feature = 'leisure_playground'][zoom >= 13] {
     polygon-fill: @playground;
     line-color: saturate(darken(@playground, 60%), 30%);
