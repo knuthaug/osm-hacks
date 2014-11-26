@@ -1211,10 +1211,10 @@
           background/line-join: round;
           background/line-width: @path-width-z13 + 2 * @paths-background-width;
           [zoom >= 15] { background/line-width: @path-width-z15 + 2 * @paths-background-width; }
-          .roads-fill { background/line-opacity: 0.4; }
+          .roads-fill { background/line-opacity: 0; }
         }
         line/line-color: @path-fill;
-        line/line-dasharray: 6,3;
+        line/line-dasharray: 3,3;
         line/line-join: round;
         line/line-cap: round;
         line/line-width: @path-width-z13;
