@@ -22,15 +22,15 @@
   	}
     [mtb_scale = '4'] {
        line-width: 2.0;
-       line-color: #ff0000;
+       line-color: #333;
   	}
     [mtb_scale = '5'] {
        line-width: 2.0;
-       line-color: #ff0000;
+       line-color: #222;
   	}
     [mtb_scale = '6'] {
        line-width: 2.0;
-       line-color: #ff0000;
+       line-color: #111;
   	}
   }
 
@@ -78,6 +78,27 @@
     line-width: 3.5;
    }
   } 
+
+/* mtb name labels */
+  [feature = 'highway_path'] {
+    [zoom >= 14] {
+      text-name: "[mtb_name]";
+      text-size: 9;
+      text-fill: black;
+      text-placement: line;
+      text-face-name: @book-fonts;
+      text-halo-radius: 1.5;
+      text-halo-fill: white;
+      text-wrap-width: 50;
+      text-min-distance: 10;
+    }
+    [zoom >=15] {
+          text-size:11.5;
+    }
+    [zoom >=16] {
+          text-size:13;
+    }
+  }
 
 }      
 

@@ -373,8 +373,8 @@
     [feature = 'highway_bridleway'],
     [feature = 'highway_path'][horse = 'designated'] {
       .bridges-casing {
-        [zoom >= 13][access != 'no'],
-        [zoom >= 13] {
+        [zoom >= 12][access != 'no'],
+        [zoom >= 12] {
           line-width: @bridleway-width-z13 + 2 * (@paths-background-width + @paths-bridge-casing-width);
           [zoom >= 15] { line-width: @bridleway-width-z15 + 2 * (@paths-background-width + @paths-bridge-casing-width); }
           line-color: @bridge-casing;
@@ -386,8 +386,8 @@
     [feature = 'highway_footway'],
     [feature = 'highway_path'][foot = 'designated'] {
       .bridges-casing {
-        [zoom >= 13][access != 'no'],
-        [zoom >= 13] {
+        [zoom >= 12][access != 'no'],
+        [zoom >= 12] {
           line-width: @footway-width-z13 + 2 * (@paths-background-width + @paths-bridge-casing-width);
           [zoom >= 13] { line-width: @footway-width-z15 + 2 * (@paths-background-width + @paths-bridge-casing-width); }
           line-color: @bridge-casing;
@@ -399,8 +399,8 @@
     [feature = 'highway_cycleway'],
     [feature = 'highway_path'][bicycle = 'designated'] {
       .bridges-casing {
-        [zoom >= 13][access != 'no'],
-        [zoom >= 13] {
+        [zoom >= 12][access != 'no'],
+        [zoom >= 12] {
           line-width: @cycleway-width-z13 + 2 * (@paths-background-width + @paths-bridge-casing-width);
           [zoom >= 13] { line-width: @cycleway-width-z13 + 2 * (@paths-background-width + @paths-bridge-casing-width); }
           line-color: @bridge-casing;
@@ -411,8 +411,8 @@
 
     [feature = 'highway_path'] {
       .bridges-casing {
-        [zoom >= 13][access != 'no'],
-        [zoom >= 13] {
+        [zoom >= 12][access != 'no'],
+        [zoom >= 12] {
           line-width: @path-width-z13 + 2 * (@paths-background-width + @paths-bridge-casing-width);
           [zoom >= 13] { line-width: @path-width-z13 + 2 * (@paths-background-width + @paths-bridge-casing-width); }
           line-color: @bridge-casing;
@@ -423,7 +423,7 @@
 
     [feature = 'highway_track'] {
       .bridges-casing {
-        [zoom >= 13][access != 'no'] {
+        [zoom >= 12][access != 'no'] {
           line-color: @bridge-casing;
           line-join: round;
           line-width: @track-width-z13 + 2 * (@paths-background-width + @paths-bridge-casing-width);
@@ -434,7 +434,7 @@
             line-width: @track-grade2-width-z13 + 2 * (@paths-background-width + @paths-bridge-casing-width);
           }
         }
-        [zoom >= 13] {
+        [zoom >= 12] {
           line-width: @track-width-z13 + 2 * (@paths-background-width + @paths-bridge-casing-width);
           [tracktype = 'grade1'] {
             line-width: @track-grade1-width-z13 + 2 * (@paths-background-width + @paths-bridge-casing-width);
@@ -556,9 +556,9 @@
     [feature = 'highway_path'][foot = 'designated'] {
       .bridges-casing {
         [zoom >= 14][access != 'no'],
-        [zoom >= 13] {
+        [zoom >= 12] {
           line-width: @footway-width-z13 + 2 * @paths-background-width;
-          [zoom >= 13] { line-width: @footway-width-z13 + 2 * @paths-background-width; }
+          [zoom >= 12] { line-width: @footway-width-z13 + 2 * @paths-background-width; }
           line-color: @footway-casing;
           line-join: round;
         }
@@ -569,7 +569,7 @@
     [feature = 'highway_path'][bicycle = 'designated'] {
       .bridges-casing {
         [zoom >= 14][access != 'no'],
-        [zoom >= 13] {
+        [zoom >= 12] {
           line-width: @cycleway-width-z13 + 2 * @paths-background-width;
           [zoom >= 13] { line-width: @cycleway-width-z13 + 2 * @paths-background-width; }
           line-color: @cycleway-casing;
@@ -593,9 +593,9 @@
     [feature = 'highway_path'] {
       .bridges-casing {
         [zoom >= 14][access != 'no'],
-        [zoom >= 13] {
+        [zoom >= 12] {
           line-width: @path-width-z13 + 2 * @paths-background-width;
-          [zoom >= 13] { line-width: @path-width-z13 + 2 * @paths-background-width; }
+          [zoom >= 12] { line-width: @path-width-z13 + 2 * @paths-background-width; }
           line-color: @path-casing;
           line-join: round;
         }
@@ -605,7 +605,7 @@
     [feature = 'highway_track'] {
       /* We don't set opacity here, so it's 1.0. Aside from that, it's basically a copy of roads-fill::background in the track part of ::fill */
       .bridges-casing {
-        [zoom >= 13][access != 'no'] {
+        [zoom >= 12][access != 'no'] {
           line-color: @track-casing;
           line-join: round;
           line-width: @track-width-z13 + 2 * @paths-background-width;
@@ -616,7 +616,7 @@
             line-width: @track-grade2-width-z13 + 2 * @paths-background-width;
           }
         }
-        [zoom >= 13] {
+        [zoom >= 12] {
           line-width: @track-width-z13 + 2 * @paths-background-width;
           [tracktype = 'grade1'] {
             line-width: @track-grade1-width-z13 + 2 * @paths-background-width;
@@ -1107,7 +1107,7 @@
 
     [feature = 'highway_bridleway'],
     [feature = 'highway_path'][horse = 'designated'] {
-      [zoom >= 13][access != 'no'],
+      [zoom >= 12][access != 'no'],
       [zoom >= 15] {
         .tunnels-fill {
           tunnelcasing/line-width: @bridleway-width-z13 + 2 * (@paths-background-width + @paths-tunnel-casing-width);
@@ -1137,7 +1137,7 @@
 
     [feature = 'highway_footway'],
     [feature = 'highway_path'][foot = 'designated'] {
-      [zoom >= 13][access != 'no'],
+      [zoom >= 12][access != 'no'],
       [zoom >= 15] {
         .tunnels-fill {
           tunnelcasing/line-width: @footway-width-z13 + 2 * (@paths-background-width + @paths-tunnel-casing-width);
@@ -1165,7 +1165,7 @@
 
     [feature = 'highway_cycleway'],
     [feature = 'highway_path'][bicycle = 'designated'] {
-      [zoom >= 13][access != 'no'],
+      [zoom >= 12][access != 'no'],
       [zoom >= 15] {
         .tunnels-fill {
           tunnelcasing/line-width: @cycleway-width-z13 + 2 * (@paths-background-width + @paths-tunnel-casing-width);
@@ -1196,8 +1196,8 @@
     * given the specitivity precedence.
     */
     [feature = 'highway_path'] {
-      [zoom >= 13][access != 'no'],
-      [zoom >= 13] {
+      [zoom >= 12][access != 'no'],
+      [zoom >= 12] {
         .tunnels-fill {
           tunnelcasing/line-width: @path-width-z13 + 2 * (@paths-background-width + @paths-tunnel-casing-width);
           [zoom >= 15] { tunnelcasing/line-width: @path-width-z15 + 2 * (@paths-background-width + @paths-tunnel-casing-width); }
@@ -1218,13 +1218,13 @@
         line/line-join: round;
         line/line-cap: round;
         line/line-width: @path-width-z13;
-        [zoom >= 13] { line/line-width: @path-width-z15; }
+        [zoom >= 12] { line/line-width: @path-width-z15; }
       }
     }
 
     [feature = 'highway_track'] {
-      [zoom >= 13][access != 'no'],
-      [zoom >= 13] {
+      [zoom >= 12][access != 'no'],
+      [zoom >= 12] {
         .tunnels-fill {
           tunnelcasing/line-color: @tunnel-casing;
           tunnelcasing/line-dasharray: 4,2;
@@ -1695,7 +1695,7 @@
       line-width: 1;
     }
   }
-
+  
   [feature = 'highway_track'][zoom >= 14] {
     line-color: @track-fill;
     line-width: 1;
